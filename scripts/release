@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+REMOTE_BRANCH=master
+PROJECT_NAME=SFlowLayoutKit
+POD_SPEC=SFlowLayoutKit.podspec
+
+POD=${COCOAPODS:-pod}
