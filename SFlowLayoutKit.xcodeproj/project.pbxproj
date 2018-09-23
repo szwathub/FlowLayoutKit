@@ -16,10 +16,13 @@
 			dependencies = (
 			);
 			name = "Cleanup Whitespace";
+			productName = "Cleanup Whitespace";
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		364DAE212156913F005B2FC6 /* SWaterFallFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 364DAE1F2156913F005B2FC6 /* SWaterFallFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		364DAE222156913F005B2FC6 /* SWaterFallFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DAE202156913F005B2FC6 /* SWaterFallFlowLayout.m */; };
 		36F155D020DD0FAB002436F4 /* SFlowLayoutKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F155CE20DD0FAB002436F4 /* SFlowLayoutKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36F155D920DD0FC5002436F4 /* SFlowLayoutKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F155D820DD0FC5002436F4 /* SFlowLayoutKitTests.m */; };
 		36F155DB20DD0FC5002436F4 /* SFlowLayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3601B55B200C90960011CCAE /* SFlowLayoutKit.framework */; };
@@ -36,15 +39,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00FE7E8B36C807BA2AB942BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		2DEE15FAD68818383A71AF92 /* SFlowLayoutKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; path = SFlowLayoutKit.podspec; sourceTree = "<group>"; };
+		00FE7E8B36C807BA2AB942BC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2DEE15FAD68818383A71AF92 /* SFlowLayoutKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = SFlowLayoutKit.podspec; sourceTree = "<group>"; };
 		3601B55B200C90960011CCAE /* SFlowLayoutKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SFlowLayoutKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		364DAE1F2156913F005B2FC6 /* SWaterFallFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWaterFallFlowLayout.h; sourceTree = "<group>"; };
+		364DAE202156913F005B2FC6 /* SWaterFallFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWaterFallFlowLayout.m; sourceTree = "<group>"; };
 		36F155CE20DD0FAB002436F4 /* SFlowLayoutKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFlowLayoutKit.h; sourceTree = "<group>"; };
 		36F155CF20DD0FAB002436F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36F155D620DD0FC4002436F4 /* SFlowLayoutKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFlowLayoutKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36F155D820DD0FC5002436F4 /* SFlowLayoutKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFlowLayoutKitTests.m; sourceTree = "<group>"; };
 		36F155DA20DD0FC5002436F4 /* SFlowLayoutKitTestsInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SFlowLayoutKitTestsInfo.plist; sourceTree = "<group>"; };
-		3CC3D8586F1FE5DB593A38D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3CC3D8586F1FE5DB593A38D0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				36F155CE20DD0FAB002436F4 /* SFlowLayoutKit.h */,
+				364DAE1F2156913F005B2FC6 /* SWaterFallFlowLayout.h */,
+				364DAE202156913F005B2FC6 /* SWaterFallFlowLayout.m */,
 				36F155CF20DD0FAB002436F4 /* Info.plist */,
 			);
 			path = SFlowLayoutKit;
@@ -121,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36F155D020DD0FAB002436F4 /* SFlowLayoutKit.h in Headers */,
+				364DAE212156913F005B2FC6 /* SWaterFallFlowLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +244,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "#!/bin/sh\ndirectories=(Examples SFlowLayoutKit Tests)\n\nfor directory in \"${directories[@]}\"\ndo\n    echo \"Cleaning whitespace in directory: $directory\"\n    find $directory -iregex '.*\\.swift' -exec sed -E -i '' -e 's/[[:blank:]]*$//' {} \\;\n    find $directory -iregex '.*\\.[hm]' -exec sed -E -i '' -e 's/[[:blank:]]*$//' {} \\;\ndone\n";
-			showEnvVarsInLog = 1;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -245,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364DAE222156913F005B2FC6 /* SWaterFallFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
