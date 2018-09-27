@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		362306A920271A9C0058A7FF /* SFlowLayoutKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 362306A820271A9C0058A7FF /* SFlowLayoutKitExampleTests.m */; };
+		364145FA215BA2D9001418CF /* SFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364145F9215BA2D9001418CF /* SFBaseViewController.m */; };
+		36414604215C797F001418CF /* SFloatingHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 36414603215C797F001418CF /* SFloatingHeader.m */; };
 		364DAE1B21568E55005B2FC6 /* SFlowLayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A37ED44ACEC4340A1838A61 /* SFlowLayoutKit.framework */; };
 		364DAE1C21568E55005B2FC6 /* SFlowLayoutKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A37ED44ACEC4340A1838A61 /* SFlowLayoutKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		364DAE2A2157E37C005B2FC6 /* SFloatingHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DAE292157E37C005B2FC6 /* SFloatingHeaderViewController.m */; };
+		364DAE302159DAC3005B2FC6 /* SWaterFallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DAE2F2159DAC3005B2FC6 /* SWaterFallViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -79,6 +83,14 @@
 		362306A820271A9C0058A7FF /* SFlowLayoutKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFlowLayoutKitExampleTests.m; sourceTree = "<group>"; };
 		362306B020271ABB0058A7FF /* SFlowLayoutKitExampleTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFlowLayoutKitExampleTests-Prefix.pch"; sourceTree = "<group>"; };
 		362306B320271C8A0058A7FF /* SFlowLayoutKitExampleTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "SFlowLayoutKitExampleTests-Info.plist"; sourceTree = "<group>"; };
+		364145F8215BA2D9001418CF /* SFBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFBaseViewController.h; sourceTree = "<group>"; };
+		364145F9215BA2D9001418CF /* SFBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFBaseViewController.m; sourceTree = "<group>"; };
+		36414602215C797F001418CF /* SFloatingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFloatingHeader.h; sourceTree = "<group>"; };
+		36414603215C797F001418CF /* SFloatingHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFloatingHeader.m; sourceTree = "<group>"; };
+		364DAE282157E37C005B2FC6 /* SFloatingHeaderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFloatingHeaderViewController.h; sourceTree = "<group>"; };
+		364DAE292157E37C005B2FC6 /* SFloatingHeaderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFloatingHeaderViewController.m; sourceTree = "<group>"; };
+		364DAE2E2159DAC3005B2FC6 /* SWaterFallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWaterFallViewController.h; sourceTree = "<group>"; };
+		364DAE2F2159DAC3005B2FC6 /* SWaterFallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWaterFallViewController.m; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SFlowLayoutKitExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SFlowLayoutKitExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -138,6 +150,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		36414601215BA979001418CF /* SFloatingHeaderFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				364DAE282157E37C005B2FC6 /* SFloatingHeaderViewController.h */,
+				364DAE292157E37C005B2FC6 /* SFloatingHeaderViewController.m */,
+				36414602215C797F001418CF /* SFloatingHeader.h */,
+				36414603215C797F001418CF /* SFloatingHeader.m */,
+			);
+			path = SFloatingHeaderFlowLayout;
+			sourceTree = "<group>";
+		};
+		364DAE2D2157E380005B2FC6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				364145F8215BA2D9001418CF /* SFBaseViewController.h */,
+				364145F9215BA2D9001418CF /* SFBaseViewController.m */,
+				364DAE2E2159DAC3005B2FC6 /* SWaterFallViewController.h */,
+				364DAE2F2159DAC3005B2FC6 /* SWaterFallViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		5FCE729EED66315504034CA6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +215,8 @@
 		6003F593195388D20070C39A /* SFlowLayoutKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				36414601215BA979001418CF /* SFloatingHeaderFlowLayout */,
+				364DAE2D2157E380005B2FC6 /* ViewControllers */,
 				6003F59C195388D20070C39A /* SFAppDelegate.h */,
 				6003F59D195388D20070C39A /* SFAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -252,7 +288,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SF;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = ZhiweiSun;
 				TargetAttributes = {
 					362306A520271A9C0058A7FF = {
@@ -343,7 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364145FA215BA2D9001418CF /* SFBaseViewController.m in Sources */,
+				36414604215C797F001418CF /* SFloatingHeader.m in Sources */,
 				6003F59E195388D20070C39A /* SFAppDelegate.m in Sources */,
+				364DAE302159DAC3005B2FC6 /* SWaterFallViewController.m in Sources */,
+				364DAE2A2157E37C005B2FC6 /* SFloatingHeaderViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* SFViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -480,12 +520,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -533,12 +575,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

@@ -12,11 +12,19 @@
 //
 
 #import "SFAppDelegate.h"
+#import "SFViewController.h"
 
 @implementation SFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     /* Override point for customization after application launch. */
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    SFViewController *rootVC = [[SFViewController alloc] init];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:rootVC];
+
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
