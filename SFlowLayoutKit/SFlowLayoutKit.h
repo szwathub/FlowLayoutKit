@@ -22,6 +22,8 @@ FOUNDATION_EXPORT const unsigned char SFlowLayoutKitVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <SFlowLayoutKit/PublicHeader.h>
 #if __has_include(<SFlowLayoutKit/SFlowLayoutKit.h>)
     #import <SFlowLayoutKit/SWaterFallFlowLayout.h>
+    #import <SFlowLayoutKit/SFloatingHeaderFlowLayout.h>
 #else
     #import "SWaterFallFlowLayout.h"
+    #import "SFloatingHeaderFlowLayout.h"
 #endif

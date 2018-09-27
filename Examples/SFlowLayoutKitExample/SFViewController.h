@@ -11,8 +11,8 @@
 //      09/22/2018: Created by Cyrex on 09/22/2018
 //
 
-@import UIKit;
+#import "SFBaseViewController.h"
 
-@interface SFViewController : UIViewController
+@interface SFViewController : SFBaseViewController
 
 @end

@@ -29,14 +29,9 @@ typedef NS_ENUM(NSInteger, SWaterFallDirection) {
 @property (nonatomic, assign) SWaterFallDirection scrollDirection;
 
 /**
- number of rows, only useful when scroll direction's value is SWaterFallDirectionHorizontal
- */
-@property (nonatomic, assign) NSInteger numberOfRows;
-
-/**
  number of columns, uonly userful when scroll direction's value is SWaterFallDirectionVertical
  */
-@property (nonatomic, assign) NSInteger numberOfColumns;
+@property (nonatomic, assign) NSInteger numberOfRowColumns;
 
 @property (nonatomic, assign) CGFloat minimumLineSpacing;
 @property (nonatomic, assign) CGFloat minimumInteritemSpacing;
