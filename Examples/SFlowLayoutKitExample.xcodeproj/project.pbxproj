@@ -161,15 +161,13 @@
 			path = SFloatingHeaderFlowLayout;
 			sourceTree = "<group>";
 		};
-		364DAE2D2157E380005B2FC6 /* ViewControllers */ = {
+		366F1C81215CE96500B5DA7D /* SWaterFallFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
-				364145F8215BA2D9001418CF /* SFBaseViewController.h */,
-				364145F9215BA2D9001418CF /* SFBaseViewController.m */,
 				364DAE2E2159DAC3005B2FC6 /* SWaterFallViewController.h */,
 				364DAE2F2159DAC3005B2FC6 /* SWaterFallViewController.m */,
 			);
-			name = ViewControllers;
+			path = SWaterFallFlowLayout;
 			sourceTree = "<group>";
 		};
 		5FCE729EED66315504034CA6 /* Products */ = {
@@ -215,13 +213,15 @@
 		6003F593195388D20070C39A /* SFlowLayoutKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				366F1C81215CE96500B5DA7D /* SWaterFallFlowLayout */,
 				36414601215BA979001418CF /* SFloatingHeaderFlowLayout */,
-				364DAE2D2157E380005B2FC6 /* ViewControllers */,
 				6003F59C195388D20070C39A /* SFAppDelegate.h */,
 				6003F59D195388D20070C39A /* SFAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* SFViewController.h */,
 				6003F5A6195388D20070C39A /* SFViewController.m */,
+				364145F8215BA2D9001418CF /* SFBaseViewController.h */,
+				364145F9215BA2D9001418CF /* SFBaseViewController.m */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,

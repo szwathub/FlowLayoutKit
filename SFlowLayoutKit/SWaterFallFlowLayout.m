@@ -37,10 +37,9 @@
     }
 
     for (NSInteger i = 0; i < [self.collectionView numberOfItemsInSection:0]; i++) {
-        [self.itemsAttributes addObject:[self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathWithIndex:i]]];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        [self.itemsAttributes addObject:[self layoutAttributesForItemAtIndexPath:indexPath]];
     }
-
-    [self.collectionView reloadData];
 }
 
 - (NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
@@ -63,32 +62,32 @@
                                                 atIndexPath:indexPath];
     if (SWaterFallDirectionVertical == self.scrollDirection) {
         CGFloat totalWidth = self.collectionView.frame.size.width;
-        // 有效的高度 (出去间隔及边界)
-        CGFloat validWidth = totalWidth - self.sectionInset.left - self.self.sectionInset.right - (self.numberOfRowColumns - 1) * self.minimumLineSpacing;
-        // 每一个item的高度
-        CGFloat itemWidth = validWidth / self.numberOfRowColumns;
+
+        CGFloat validWidth = totalWidth - self.sectionInset.left - self.self.sectionInset.right - (self.numberOfRowColumns - 1) * self.minimumInteritemSpacing;
+
+        CGFloat itemWidth = floor(validWidth / self.numberOfRowColumns);
 
         NSInteger index = [self indexOfShortestRowColumns];
-        CGFloat originY = self.sectionInset.top + index * (itemWidth + self.minimumLineSpacing);
-        CGFloat originX = [[self.dimensionsArray objectAtIndex:index] floatValue];
+        CGFloat originX  = self.sectionInset.left + index * (itemWidth + self.minimumInteritemSpacing);
+        CGFloat originY = [[self.dimensionsArray objectAtIndex:index] floatValue];
 
-        attrs.frame = CGRectMake(originX, originY, dimensions, itemWidth);
+        attrs.frame = CGRectMake(originX, originY, itemWidth, dimensions);
         [self.itemsAttributes addObject:attrs];
-        self.dimensionsArray[index] = @(originX + dimensions + self.minimumInteritemSpacing);
+        self.dimensionsArray[index] = @(originY + dimensions + self.minimumLineSpacing);
     } else {
         CGFloat totalHeight = self.collectionView.frame.size.height;
-        // 有效的高度 (出去间隔及边界)
-        CGFloat validHeight = totalHeight - self.sectionInset.top - self.self.sectionInset.bottom - (self.numberOfRowColumns - 1) * self.minimumInteritemSpacing;
-        // 每一个item的高度
-        CGFloat itemHeight = validHeight / self.numberOfRowColumns;
+
+        CGFloat validHeight = totalHeight - self.sectionInset.top - self.self.sectionInset.bottom - (self.numberOfRowColumns - 1) * self.minimumLineSpacing;
+
+        CGFloat itemHeight = floor(validHeight / self.numberOfRowColumns);
 
         NSInteger index = [self indexOfShortestRowColumns];
-        CGFloat originY = self.sectionInset.top + index * (itemHeight + self.minimumInteritemSpacing);
+        CGFloat originY = self.sectionInset.top + index * (itemHeight + self.minimumLineSpacing);
         CGFloat originX = [[self.dimensionsArray objectAtIndex:index] floatValue];
 
         attrs.frame = CGRectMake(originX, originY, dimensions, itemHeight);
         [self.itemsAttributes addObject:attrs];
-        self.dimensionsArray[index] = @(originX + dimensions + self.minimumLineSpacing);
+        self.dimensionsArray[index] = @(originX + dimensions + self.minimumInteritemSpacing);
     }
 
     return attrs;
@@ -98,18 +97,16 @@
     if (SWaterFallDirectionVertical == self.scrollDirection) {
         CGFloat width = self.collectionView.frame.size.width;
         NSInteger index = [self indexOfLongestRowColumns];
-        CGFloat height = [self.dimensionsArray[index] floatValue] + self.sectionInset.bottom - self.minimumInteritemSpacing;
-
-        return CGSizeMake(width, height);
-    } else {
-        CGFloat height = self.collectionView.frame.size.height;
-        NSInteger index = [self indexOfLongestRowColumns];
-        CGFloat width = [self.dimensionsArray[index] floatValue] + self.sectionInset.right - self.minimumLineSpacing;
+        CGFloat height = [self.dimensionsArray[index] floatValue] + self.sectionInset.bottom - self.minimumLineSpacing;
 
         return CGSizeMake(width, height);
     }
 
-    return CGSizeZero;
+    CGFloat height = self.collectionView.frame.size.height;
+    NSInteger index = [self indexOfLongestRowColumns];
+    CGFloat width = [self.dimensionsArray[index] floatValue] + self.sectionInset.right - self.minimumInteritemSpacing;
+
+    return CGSizeMake(width, height);
 }
 
 
