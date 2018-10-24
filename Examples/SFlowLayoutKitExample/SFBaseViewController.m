@@ -36,6 +36,8 @@
 }
 
 - (void)configNavgations {
+    self.edgesForExtendedLayout = UIRectEdgeAll;
+
     UINavigationBar *navigationBar = self.navigationController.navigationBar;
     if (navigationBar) {
         navigationBar.shadowImage  = [UIImage new];
