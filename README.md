@@ -1,6 +1,6 @@
 # SFlowLayoutKit
 
-[![CI Status](http://img.shields.io/travis/Cyrex/SFlowLayoutKit.svg?style=flat)](https://travis-ci.org/Cyrex/SFlowLayoutKit)
+[![Build Status](https://travis-ci.com/Cyrex/SFlowLayoutKit.svg?branch=master)](https://travis-ci.com/Cyrex/SFlowLayoutKit)
 [![codecov.io](https://codecov.io/github/Cyrex/SFlowLayoutKit/coverage.svg?branch=master)](https://codecov.io/github/Cyrex/SFlowLayoutKit?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/SFlowLayoutKit.svg?style=flat)](http://cocoapods.org/pods/SFlowLayoutKit)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Cyrex/SFlowLayoutKit)

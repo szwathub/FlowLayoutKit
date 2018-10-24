@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SFBaseViewController : UIViewController
 
 - (void)addNavCloseItem;
+- (void)addNavControlItem;
+
+- (void)showControlView;
 
 @end
 

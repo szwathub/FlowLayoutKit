@@ -27,8 +27,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self confignavgations];
+    [self configViews];
+}
+
+
+#pragma mark - Private Methods
+- (void)configViews {
     [self.view addSubview:self.collectionView];
-    self.collectionView.frame = self.view.frame;
+    self.collectionView.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y,
+                                           self.view.frame.size.width, self.view.frame.size.height - 64);
+    ;
+}
+
+- (void)confignavgations {
+    self.title = @"SFloatingHeaderFlowLayout";
+    [self addNavCloseItem];
+    [self addNavControlItem];
+}
+
+
+#pragma mark - Override
+- (void)showControlView {
+    [super showControlView];
+    
 }
 
 
@@ -42,9 +64,6 @@
                                                                            forIndexPath:indexPath];
 
     cell.backgroundColor = [UIColor redColor];
-//    if (indexPath.row < self.model.descArray.count) {
-//        cell.titleString = [self.model.descArray objectAtIndex:indexPath.row];
-//    }
 
     return cell;
 }
@@ -61,7 +80,7 @@
         dimensionsForDirection:(SWaterFallDirection)direction
                    atIndexPath:(NSIndexPath *)indexPath {
 
-    return 100;
+    return 40 + (arc4random() % 40);;
 }
 
 
@@ -70,10 +89,9 @@
     if (!_collectionView) {
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
                                              collectionViewLayout:self.flowLayout];
-        _collectionView.backgroundColor = [UIColor clearColor];
+        _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
-        _collectionView.showsHorizontalScrollIndicator = NO;
         [_collectionView registerClass:[UICollectionViewCell class]
             forCellWithReuseIdentifier:@"UICollectionViewCell"];
     }

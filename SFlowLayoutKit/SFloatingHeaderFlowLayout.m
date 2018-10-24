@@ -31,7 +31,8 @@
         CGSize  headerSize = [self headerReferenceSize];
         CGFloat deltaY = fabs(offset.y - minY);
         for (UICollectionViewLayoutAttributes *attrs in attributesCopy) {
-            if ([attrs representedElementKind] == UICollectionElementKindSectionHeader) {
+            if ([attrs representedElementKind] == UICollectionElementKindSectionHeader
+                && [[attrs indexPath] compare:[NSIndexPath indexPathForRow:0 inSection:0]] == NSOrderedSame) {
                 CGRect headerRect = [attrs frame];
                 headerRect.size.height = MAX(minY, headerSize.height + deltaY);
                 headerRect.origin.y = headerRect.origin.y - deltaY;
