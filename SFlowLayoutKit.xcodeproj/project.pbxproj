@@ -25,6 +25,8 @@
 		364DAE222156913F005B2FC6 /* SWaterFallFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DAE202156913F005B2FC6 /* SWaterFallFlowLayout.m */; };
 		364DAE262157C43F005B2FC6 /* SFloatingHeaderFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 364DAE242157C43F005B2FC6 /* SFloatingHeaderFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		364DAE272157C43F005B2FC6 /* SFloatingHeaderFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DAE252157C43F005B2FC6 /* SFloatingHeaderFlowLayout.m */; };
+		369FC1EE2181DD45005C446C /* SStackFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 369FC1EC2181DD45005C446C /* SStackFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		369FC1EF2181DD45005C446C /* SStackFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 369FC1ED2181DD45005C446C /* SStackFlowLayout.m */; };
 		36F155D020DD0FAB002436F4 /* SFlowLayoutKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 36F155CE20DD0FAB002436F4 /* SFlowLayoutKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		36F155D920DD0FC5002436F4 /* SFlowLayoutKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36F155D820DD0FC5002436F4 /* SFlowLayoutKitTests.m */; };
 		36F155DB20DD0FC5002436F4 /* SFlowLayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3601B55B200C90960011CCAE /* SFlowLayoutKit.framework */; };
@@ -48,6 +50,8 @@
 		364DAE202156913F005B2FC6 /* SWaterFallFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWaterFallFlowLayout.m; sourceTree = "<group>"; };
 		364DAE242157C43F005B2FC6 /* SFloatingHeaderFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFloatingHeaderFlowLayout.h; sourceTree = "<group>"; };
 		364DAE252157C43F005B2FC6 /* SFloatingHeaderFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFloatingHeaderFlowLayout.m; sourceTree = "<group>"; };
+		369FC1EC2181DD45005C446C /* SStackFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SStackFlowLayout.h; sourceTree = "<group>"; };
+		369FC1ED2181DD45005C446C /* SStackFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SStackFlowLayout.m; sourceTree = "<group>"; };
 		36F155CE20DD0FAB002436F4 /* SFlowLayoutKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFlowLayoutKit.h; sourceTree = "<group>"; };
 		36F155CF20DD0FAB002436F4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36F155D620DD0FC4002436F4 /* SFlowLayoutKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SFlowLayoutKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +116,8 @@
 				364DAE202156913F005B2FC6 /* SWaterFallFlowLayout.m */,
 				364DAE242157C43F005B2FC6 /* SFloatingHeaderFlowLayout.h */,
 				364DAE252157C43F005B2FC6 /* SFloatingHeaderFlowLayout.m */,
+				369FC1EC2181DD45005C446C /* SStackFlowLayout.h */,
+				369FC1ED2181DD45005C446C /* SStackFlowLayout.m */,
 				36F155CF20DD0FAB002436F4 /* Info.plist */,
 			);
 			path = SFlowLayoutKit;
@@ -135,6 +141,7 @@
 			files = (
 				36F155D020DD0FAB002436F4 /* SFlowLayoutKit.h in Headers */,
 				364DAE262157C43F005B2FC6 /* SFloatingHeaderFlowLayout.h in Headers */,
+				369FC1EE2181DD45005C446C /* SStackFlowLayout.h in Headers */,
 				364DAE212156913F005B2FC6 /* SWaterFallFlowLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				364DAE272157C43F005B2FC6 /* SFloatingHeaderFlowLayout.m in Sources */,
+				369FC1EF2181DD45005C446C /* SStackFlowLayout.m in Sources */,
 				364DAE222156913F005B2FC6 /* SWaterFallFlowLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

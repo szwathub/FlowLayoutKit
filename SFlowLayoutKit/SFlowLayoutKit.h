@@ -23,7 +23,9 @@ FOUNDATION_EXPORT const unsigned char SFlowLayoutKitVersionString[];
 #if __has_include(<SFlowLayoutKit/SFlowLayoutKit.h>)
     #import <SFlowLayoutKit/SWaterFallFlowLayout.h>
     #import <SFlowLayoutKit/SFloatingHeaderFlowLayout.h>
+    #import <SFlowLayoutKit/SStackFlowLayout.h>
 #else
     #import "SWaterFallFlowLayout.h"
     #import "SFloatingHeaderFlowLayout.h"
+    #import "SStackFlowLayout.h"
 #endif
