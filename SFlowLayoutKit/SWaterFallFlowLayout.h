@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, SWaterFallDirection) {
 @property (nonatomic, assign) SWaterFallDirection scrollDirection;
 
 /**
- number of columns, uonly userful when scroll direction's value is SWaterFallDirectionVertical
+ number of columns, only userful when scroll direction's value is SWaterFallDirectionVertical
  */
 @property (nonatomic, assign) NSInteger numberOfRowColumns;
 
@@ -42,9 +42,7 @@ typedef NS_ENUM(NSInteger, SWaterFallDirection) {
 
 @protocol SWaterFallFlowLayoutDelegate <NSObject>
 @required
-- (CGFloat)waterFallFlowLayout:(SWaterFallFlowLayout *)layout
-        dimensionsForDirection:(SWaterFallDirection)direction
-                   atIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)waterFallFlowLayout:(SWaterFallFlowLayout *)layout dimensionsAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
 

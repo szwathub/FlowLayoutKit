@@ -57,9 +57,7 @@
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
 
-    CGFloat dimensions = [self.delegate waterFallFlowLayout:self
-                                     dimensionsForDirection:self.scrollDirection
-                                                atIndexPath:indexPath];
+    CGFloat dimensions = [self.delegate waterFallFlowLayout:self dimensionsAtIndexPath:indexPath];
     if (SWaterFallDirectionVertical == self.scrollDirection) {
         CGFloat totalWidth = self.collectionView.frame.size.width;
 
