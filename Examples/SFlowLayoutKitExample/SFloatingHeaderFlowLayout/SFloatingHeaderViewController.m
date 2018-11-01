@@ -70,7 +70,7 @@
         reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                        withReuseIdentifier:@"SFloatingHeader"
                                                               forIndexPath:indexPath];
-        reuseView.backgroundColor = [UIColor blueColor];
+//        reuseView.backgroundColor = [UIColor blueColor];
 
         return reuseView;
     }
@@ -117,7 +117,7 @@
 - (SFloatingHeaderFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[SFloatingHeaderFlowLayout alloc] init];
-        _flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 306);
+        _flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 278);
         _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 10, 0);
         _flowLayout.minimumLineSpacing = 20;
         _flowLayout.minimumInteritemSpacing = 20;
