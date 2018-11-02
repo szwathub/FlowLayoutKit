@@ -36,6 +36,9 @@
 #pragma mark - Private Methods
 - (void)configViews {
     [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 - (void)confignavgations {
@@ -97,7 +100,7 @@
 #pragma mark - Getters
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
                                              collectionViewLayout:self.flowLayout];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;

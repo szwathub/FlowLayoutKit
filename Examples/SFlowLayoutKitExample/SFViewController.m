@@ -36,6 +36,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 - (void)configNavgations {
@@ -60,7 +63,7 @@
             cell.textLabel.text = @"SWaterFallFlowLayout";
             break;
         case 2:
-            cell.textLabel.text = @"";
+            cell.textLabel.text = @"SStackFlowLayout";
             break;
         case 3:
             cell.textLabel.text = @"";
@@ -125,9 +128,7 @@
 #pragma mark - Getters
 - (UITableView *)tableView {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0,
-                                                                   CGRectGetWidth(self.view.bounds),
-                                                                   CGRectGetHeight(self.view.bounds))
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero
                                                   style:UITableViewStyleGrouped];
         _tableView.delegate        = self;
         _tableView.dataSource      = self;
