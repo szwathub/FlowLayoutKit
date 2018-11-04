@@ -73,7 +73,6 @@
         reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                        withReuseIdentifier:@"SFloatingHeader"
                                                               forIndexPath:indexPath];
-//        reuseView.backgroundColor = [UIColor blueColor];
 
         return reuseView;
     }
