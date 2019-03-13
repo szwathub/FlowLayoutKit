@@ -15,7 +15,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#pragma mark -
+#pragma mark - SFloatingHeaderFlowLayout
 @interface SFloatingHeaderFlowLayout : UICollectionViewFlowLayout
+
+@end
+
+
+#pragma mark -
+#pragma mark - SFloatingHeaderBackgroundFlowLayout
+@interface SFloatingHeaderBackgroundFlowLayout : UICollectionViewFlowLayout
 
 @end
 

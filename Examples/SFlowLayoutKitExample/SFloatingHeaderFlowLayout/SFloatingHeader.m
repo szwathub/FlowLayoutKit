@@ -23,7 +23,7 @@
 #pragma mark - Override
 - (void)layoutSubviews {
     [super layoutSubviews];
-    
+
     [self addSubview:self.imageView];
     [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
@@ -38,7 +38,7 @@
         _imageView.image = [UIImage imageNamed:@"image_background"];
         _imageView.contentMode = UIViewContentModeScaleAspectFill;
     }
-    
+
     return _imageView;
 }
 
