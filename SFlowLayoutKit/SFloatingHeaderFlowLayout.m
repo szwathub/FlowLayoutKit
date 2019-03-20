@@ -47,6 +47,8 @@
     return attributesCopy;
 }
 
+@end
+
 
 #pragma mark -
 #pragma mark - SFloatingHeaderBackgroundFlowLayout
