@@ -35,9 +35,9 @@
 #pragma mark - Private Methods
 - (void)configViews {
     [self.view addSubview:self.collectionView];
-    self.collectionView.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y,
-                                           self.view.frame.size.width, self.view.frame.size.height - 64);
-    ;
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 - (void)confignavgations {
@@ -50,7 +50,7 @@
 #pragma mark - Override
 - (void)showControlView {
     [super showControlView];
-    
+
 }
 
 
@@ -76,11 +76,8 @@
 
 
 #pragma mark - SWaterFallFlowLayoutDelegate
-- (CGFloat)waterFallFlowLayout:(SWaterFallFlowLayout *)layout
-        dimensionsForDirection:(SWaterFallDirection)direction
-                   atIndexPath:(NSIndexPath *)indexPath {
-
-    return 40 + (arc4random() % 40);;
+- (CGFloat)waterFallFlowLayout:(SWaterFallFlowLayout *)layout dimensionsAtIndexPath:(NSIndexPath *)indexPath {
+    return 40 + (arc4random() % 40);
 }
 
 

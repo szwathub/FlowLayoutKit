@@ -35,7 +35,12 @@
 
 #pragma mark - Private Methods
 - (void)configViews {
+    self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight | UIRectEdgeBottom;
+
     [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
 }
 
 - (void)confignavgations {
@@ -70,7 +75,6 @@
         reuseView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                        withReuseIdentifier:@"SFloatingHeader"
                                                               forIndexPath:indexPath];
-        reuseView.backgroundColor = [UIColor blueColor];
 
         return reuseView;
     }
@@ -97,7 +101,7 @@
 #pragma mark - Getters
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.frame
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero
                                              collectionViewLayout:self.flowLayout];
         _collectionView.backgroundColor = [UIColor whiteColor];
         _collectionView.dataSource = self;
@@ -117,7 +121,7 @@
 - (SFloatingHeaderFlowLayout *)flowLayout {
     if (!_flowLayout) {
         _flowLayout = [[SFloatingHeaderFlowLayout alloc] init];
-        _flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 306);
+        _flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 278);
         _flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 10, 0);
         _flowLayout.minimumLineSpacing = 20;
         _flowLayout.minimumInteritemSpacing = 20;

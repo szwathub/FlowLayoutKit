@@ -20,7 +20,6 @@
 		36421D83217F205A0056DE8A /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 36421D77217F205A0056DE8A /* MASConstraint.m */; };
 		36421D84217F205A0056DE8A /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 36421D79217F205A0056DE8A /* MASViewConstraint.m */; };
 		36421D85217F205A0056DE8A /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 36421D7A217F205A0056DE8A /* MASViewAttribute.m */; };
-		36421D86217F205A0056DE8A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 36421D7B217F205A0056DE8A /* Info.plist */; };
 		364DAE1B21568E55005B2FC6 /* SFlowLayoutKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A37ED44ACEC4340A1838A61 /* SFlowLayoutKit.framework */; };
 		364DAE1C21568E55005B2FC6 /* SFlowLayoutKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A37ED44ACEC4340A1838A61 /* SFlowLayoutKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		364DAE2A2157E37C005B2FC6 /* SFloatingHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 364DAE292157E37C005B2FC6 /* SFloatingHeaderViewController.m */; };
@@ -432,7 +431,6 @@
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				36421D86217F205A0056DE8A /* Info.plist in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,11 @@
 [![License](https://img.shields.io/cocoapods/l/SFlowLayoutKit.svg?style=flat)](http://cocoapods.org/pods/SFlowLayoutKit)
 [![Platform](https://img.shields.io/cocoapods/p/SFlowLayoutKit.svg?style=flat)](http://cocoapods.org/pods/SFlowLayoutKit)
 
+| SWaterFallFlowLayout | SFloatingHeaderFlowLayout | SStackFlowLayout |
+| ------ | ------ | ------ |
+| SWaterFallFlowLayout | ![SFloatingHeaderFlowLayout](/Screenshot/SFloatingHeaderFlowLayout.gif) | SStackFlowLayout |
+
+
 ## Requirements
 
 ## Installation
